@@ -1,6 +1,6 @@
 module go-gui-test
 
-go 1.27.1
+go 1.23
 
 require github.com/go-gui-org/go-gui v0.72.0
 
