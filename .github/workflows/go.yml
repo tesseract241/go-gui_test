@@ -23,7 +23,7 @@ jobs:
       run: go mod tidy
 
     - name: Build
-      run: go build -o ./../bin/go-gui_test -v ./...
+      run: go build -o ./bin/go-gui_test -v ./...
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
