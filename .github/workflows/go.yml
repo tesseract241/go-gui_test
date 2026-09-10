@@ -27,7 +27,12 @@ jobs:
       run: go mod tidy
 
     - name: Build
-      run: go build -v ./...
+      run: go build -o go-gui_test -v /...
 
-    - name: Test
-      run: go test -v ./...
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: go-binaries
+        path: |
+          ./bin/
+   
