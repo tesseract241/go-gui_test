@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Set up Go
-      uses: actions/setup-go@v4
+      uses: actions/setup-go@v7
       with:
         go-version: '1.26'
 
@@ -26,9 +26,8 @@ jobs:
       run: go build -o ./bin/go-gui_test -v ./...
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
-        name: go-binaries
-        path: |
-          ./bin/
+        name: go-linux-binary
+        path: ./bin/go-gui_test
    
